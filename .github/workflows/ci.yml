@@ -24,7 +24,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: 运行测试
-        run: pytest tests/ -v
+        run: PYTHONPATH=. pytest tests/ -v
 
   build:
     needs: test           # 测试通过后才构建镜像
